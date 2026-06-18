@@ -1,0 +1,23 @@
+.infinite-menu-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg, 20px);
+  overflow: hidden;
+  background: #faf7f2;
+  box-shadow: 0 8px 40px rgba(44, 44, 44, 0.1);
+}
+
+#infinite-grid-menu-canvas {
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+  display: block;
+}
+
+#infinite-grid-menu-canvas:active {
+  cursor: grabbing;
+}

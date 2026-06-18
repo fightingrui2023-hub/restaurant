@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="西湖春天·粤菜 — 一口粤韵，梦回江南">
+  <title>西湖春天·粤菜</title>
+  <link rel="preload" as="image" href="images/env-hallway.webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-main">西湖春天</span>
+        <span class="brand-sub">粤菜</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#story">故事</a>
+        <a href="#dishes">招牌</a>
+        <a href="#environment">环境</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 头图 Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img id="heroBgImg" src="images/env-hallway.webp" alt="西湖春天·粤菜 店内环境" loading="eager" fetchpriority="high" decoding="async" width="960" height="640">
+      <canvas class="hero-distort-canvas" id="heroDistortCanvas" aria-hidden="true"></canvas>
+    </div>
+    <canvas class="hero-water-canvas" id="heroWaterCanvas" aria-hidden="true"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="hero-badge">2026 必吃榜 · 经典粤菜</p>
+      <h1 class="hero-title">
+        <span class="title-line">西湖春天</span>
+        <span class="title-dot">·</span>
+        <span class="title-line">粤菜</span>
+      </h1>
+      <p class="hero-tagline">一口粤韵，梦回江南</p>
+      <p class="hero-desc">扫码了解我们的故事，等餐时光，也是江南好时节</p>
+    </div>
+    <div class="hero-swipe-hint" id="heroSwipeHint">
+      <span class="swipe-ripple" aria-hidden="true"></span>
+      <p>轻触或滑动 · 拨动水面</p>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- 创办故事 -->
+  <section class="section story" id="story">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-label">Our Story</span>
+        <h2>创办故事</h2>
+        <p class="section-intro">从西湖畔的一缕春气，到一张讲究本味的粤菜餐桌</p>
+      </header>
+
+      <div class="story-timeline">
+        <article class="story-block reveal">
+          <div class="story-year">1998</div>
+          <div class="story-body">
+            <h3>西湖边，学一味「春天」</h3>
+            <p>创始人陈春生成长于杭州。少年时常在西湖边帮厨，看师傅挑活鱼、控火候——西湖醋鱼要现杀现做，龙井虾仁要当季新茶，东坡肉要文火慢炖。他渐渐懂得：好菜不在花哨，在于<strong>应季、应时、应人</strong>。</p>
+            <p>西湖的春天来得早、去得也快。陈春生说，他最早记住的不是某一道名肴，而是湖畔柳烟初起时，厨房里飘出的那阵热气——那是他后来给店取名「春天」的缘由。</p>
+          </div>
+        </article>
+
+        <article class="story-block reveal">
+          <div class="story-year">2001</div>
+          <div class="story-body">
+            <h3>南下岭南，拜一门「功夫」</h3>
+            <p>为了把「鲜」做到极致，陈春生南下广州，在老字号厨房一待就是三年。粤菜讲究<strong>清而不淡、鲜而不俗、嫩而不生、油而不腻</strong>——片皮鸭要皮脆肉嫩，老火汤要足时足料，点心要一蒸一捏见真章。</p>
+            <p>他在岭南明白：江南有诗意，粤菜有章法。两者并不冲突，缺的是一位愿意慢慢把它们合在一起的人。</p>
+          </div>
+        </article>
+
+        <article class="story-block reveal">
+          <div class="story-year">2003</div>
+          <div class="story-body">
+            <h3>「西湖春天」，正式开门</h3>
+            <p>第一家店开在上海。店名藏着两层意思：<strong>「西湖」</strong>是乡愁与风骨，<strong>「春天」</strong>是当令与生机。不是照搬杭帮菜，也不是刻板复刻广府味——而是以江南的心境做粤菜：选当季、摆得雅、讲得清楚。</p>
+            <p>开业那天，陈春生只写了八个字挂在门口：<em>「因时而食，以鲜为本」</em>。二十余年过去，这仍是厨房里不变的规矩。</p>
+          </div>
+        </article>
+
+        <article class="story-block reveal">
+          <div class="story-year">今 日</div>
+          <div class="story-body">
+            <h3>从街角小店，到万象城</h3>
+            <p>店面换了，菜单广了，但有几件事一直没变：汤每天现熬，鸭每天现片，红米肠每天现包。服务员仍会多讲一句——「这碟红米肠，外皮的红来自天然红米，是粤式点心的老做法。」</p>
+            <p>我们希望您等餐的片刻，也能读懂这家店的来处。因为<strong>了解一道菜的故事，往往比匆忙下单，更能让一顿饭记得长久</strong>。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文化 -->
+  <section class="section culture">
+    <div class="culture-bg">
+      <img src="images/env-dining.webp" alt="" loading="lazy" decoding="async" width="800" height="1067">
+    </div>
+    <div class="culture-overlay"></div>
+    <div class="container culture-content reveal">
+      <span class="section-label light">Culture</span>
+      <h2>江南遇见粤菜</h2>
+      <blockquote>
+        「不是把西湖搬进餐厅，而是把西湖的讲究——应季、本味、留白——写进每一道粤菜里。」
+      </blockquote>
+      <div class="culture-tags">
+        <span>广府烧腊</span>
+        <span>经典粤菜</span>
+        <span>现炒现制</span>
+        <span>江南意境</span>
+        <span>精致点心</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 招牌菜 -->
+  <section class="section dishes" id="dishes">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-label">Signature</span>
+        <h2>招牌菜</h2>
+        <p class="section-intro">每道菜背后，都有一小段值得读一读的故事</p>
+      </header>
+
+      <!-- 主推大图 -->
+      <article class="dish-feature reveal">
+        <div class="dish-feature-img">
+          <div id="dish-feature-stack" aria-label="招牌菜图片卡片堆"></div>
+        </div>
+        <div class="dish-feature-dots" id="dish-feature-dots" aria-label="轮播指示"></div>
+        <div class="dish-feature-body">
+          <div class="dish-tags">
+            <span class="tag tag-primary">主推</span>
+            <span class="tag tag-hot" id="dish-feature-recommend">🔥 1973 人推荐</span>
+          </div>
+          <h3 id="dish-feature-title">港式叉烧</h3>
+          <p class="dish-quote" id="dish-feature-quote">「油而不腻，叉烧，精心调制」</p>
+          <div class="dish-wiki">
+            <span class="wiki-icon">📖</span>
+            <div>
+              <strong id="dish-feature-wiki-title">小百科 · 广府叉烧</strong>
+              <p id="dish-feature-wiki-text">选用梅花肉，以蜜汁、玫瑰露、南乳低温腌制，高温快烤锁汁。好的叉烧，断面粉嫩、切面亮泽——这是粤菜烧腊档口的基本功，也是西湖春天坚持了二十年的招牌。</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <p class="dishes-note reveal">ⓘ 价格以店内实际为准 · 更多菜品请咨询服务员</p>
+    </div>
+  </section>
+
+  <!-- 环境 -->
+  <section class="section environment" id="environment">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-label">Ambience</span>
+        <h2>环境氛围</h2>
+        <p class="section-intro">精致雅致的江南庭院风，暖黄灯光、木质桌椅、水墨画点缀——如水乡般诗意舒适</p>
+      </header>
+
+      <div class="env-gallery">
+        <figure class="env-item env-item-large reveal">
+          <img src="images/env-booth.webp" alt="卡座用餐区" loading="lazy" decoding="async" width="800" height="600">
+          <figcaption>青瓷茶具 · 金色屏风 · 私密卡座</figcaption>
+        </figure>
+        <figure class="env-item reveal">
+          <img src="images/env-dining.webp" alt="用餐大厅" loading="lazy" decoding="async" width="800" height="1067">
+          <figcaption>新中式轻奢大厅</figcaption>
+        </figure>
+        <figure class="env-item reveal">
+          <img src="images/env-hallway.webp" alt="吉祥厅走廊" loading="lazy" decoding="async" width="960" height="640">
+          <figcaption>吉祥厅 · 传统与现代的交汇</figcaption>
+        </figure>
+      </div>
+
+      <div class="env-features reveal">
+        <div class="env-feature">
+          <span class="env-icon">🅿️</span>
+          <span>可停车</span>
+        </div>
+        <div class="env-feature">
+          <span class="env-icon">🚪</span>
+          <span>有包间</span>
+        </div>
+        <div class="env-feature">
+          <span class="env-icon">👨‍👩‍👧‍👦</span>
+          <span>有大桌</span>
+        </div>
+        <div class="env-feature">
+          <span class="env-icon">📅</span>
+          <span>可预订</span>
+        </div>
+        <div class="env-feature">
+          <span class="env-icon">🔥</span>
+          <span>热菜现炒</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-label">Visit Us</span>
+        <h2>欢迎光临</h2>
+      </header>
+
+      <div class="contact-card reveal">
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="contact-label">地址</span>
+            <p>上海市闵行区吴中路 1599 号<br>万象城 5 层 L502a-b 铺</p>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">营业时间</span>
+            <p>11:00 – 14:30<br>17:00 – 21:30</p>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">人均</span>
+            <p>约 ¥168</p>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">评分</span>
+            <p>4.4 分 · 12,635 条评价</p>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="https://uri.amap.com/marker?position=121.375,31.168&name=西湖春天粤菜&callnative=1" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            导航到店
+          </a>
+          <a href="tel:02100000000" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            电话咨询
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">西湖春天 · 粤菜</p>
+      <p class="footer-slogan">一口粤韵，梦回江南</p>
+      <p class="footer-demo">Demo 演示版 · 扫码体验</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/lazy-load.js"></script>
+</body>
+</html>
