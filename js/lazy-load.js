@@ -9,16 +9,23 @@
     }
   }
 
+  function loadScript(src, flag) {
+    if (window[flag]) return;
+    window[flag] = true;
+    if (document.querySelector('script[data-lazy-src="' + src + '"]')) return;
+    var script = document.createElement('script');
+    script.src = src;
+    script.defer = true;
+    script.setAttribute('data-lazy-src', src);
+    document.body.appendChild(script);
+  }
+
   function loadHeroRipple() {
-    if (window.__heroRippleLoaded) return;
-    window.__heroRippleLoaded = true;
-    import('./hero-ripple.js');
+    loadScript('js/hero-ripple.js', '__heroRippleLoaded');
   }
 
   function loadMenuStack() {
-    if (window.__menuStackLoaded) return;
-    window.__menuStackLoaded = true;
-    import('../src/menu-entry.jsx');
+    loadScript('js/menu-entry.js', '__menuStackLoaded');
   }
 
   var hero = document.getElementById('hero');

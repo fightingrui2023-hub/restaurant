@@ -481,6 +481,41 @@ strong { font-weight: 600; color: var(--color-ink); }
   min-height: 200px;
   background: linear-gradient(135deg, #f0ebe3 0%, #e8dfd2 100%);
 }
+
+/* 招牌菜主推卡片堆（无需构建工具的纯原生实现） */
+#dish-feature-stack.dish-stack {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+#dish-feature-stack .dish-stack-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  overflow: hidden;
+  transform-origin: 50% 60%;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  will-change: transform, opacity;
+}
+#dish-feature-stack .dish-stack-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#dish-feature-stack .dish-stack-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
 .dish-feature-dots {
   display: flex;
   justify-content: center;
@@ -749,12 +784,13 @@ strong { font-weight: 600; color: var(--color-ink); }
 }
 
 /* ===== 滚动动画 ===== */
-.reveal {
+/* 无 JS（如 file:// 双击打开）时保持可见；有 JS 再启用渐入 */
+html.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.reveal.visible {
+html.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
